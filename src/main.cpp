@@ -44,13 +44,13 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 char ssid[] = "MATHEUS ";         // SSID da sua rede (nome)
 char password[] = "12213490"; // senha da sua rede
 
-char clientId[] = "68933654dc544df38ece84a8e49faeca";     // Your client ID of your spotify APP
-char clientSecret[] = "e5122fc865b1482881cbe85288f632d0"; // Your client Secret of your spotify APP (Do Not share this!)
+char clientId[] = "";     // Your client ID of your spotify APP
+char clientSecret[] = ""; // Your client Secret of your spotify APP (Do Not share this!)
 
 // Country code, including this is advisable
 #define SPOTIFY_MARKET "BR"
 
-#define SPOTIFY_REFRESH_TOKEN "AQAvI27OkCCj3dDLiOicbbO3HoUONCV6C6CZxrpA92VNn8DDTgpMWoUWoZsYXQDXdorjj7jXpx0MbT6u76Cvuahc1RZDNLV6NAnnv_m3uCQ9UVLCJx6PCgWBRG_MFzGnZuU"
+#define SPOTIFY_REFRESH_TOKEN ""
 
 //------- ---------------------- ------
 
