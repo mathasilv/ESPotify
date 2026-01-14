@@ -52,7 +52,7 @@
 
 
 // Token spotify
-// AQA_QXYzJVrdmmcTOv2y2SwZtyhGp8AfHrX4Y--bJUkhkLtpTcHElaioffY5kiXdTkygAc6u6aa9fv5KQ58riPQzqvrK4A-Wj7ouam3BxxN2N8euUoNGc2vsjMc87OoMWfw
+// NUNCA DEIXE TOKENS AQUI - Use variáveis de ambiente ou arquivo separado não versionado
 
 
 #if defined(ESP8266)
@@ -90,11 +90,12 @@
 
 //------- Replace the following! ------
 
-char ssid[] = "Matheus";         // your network SSID (name)
-char password[] = "12213490"; // your network password
+char ssid[] = "SEU_WIFI_SSID";         // your network SSID (name)
+char password[] = "SUA_SENHA_WIFI"; // your network password
 
-char clientId[] = "68933654dc544df38ece84a8e49faeca";     // Your client ID of your spotify APP
-char clientSecret[] = "e5122fc865b1482881cbe85288f632d0"; // Your client Secret of your spotify APP (Do Not share this!)
+// IMPORTANTE: Obtenha suas credenciais em https://developer.spotify.com/dashboard
+char clientId[] = "SEU_CLIENT_ID_AQUI";     // Your client ID of your spotify APP
+char clientSecret[] = "SEU_CLIENT_SECRET_AQUI"; // Your client Secret of your spotify APP (Do Not share this!)
 
 char scope[] = "user-read-playback-state%20user-modify-playback-state";
 

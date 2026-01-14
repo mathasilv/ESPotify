@@ -3,3 +3,18 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+
+# Arquivos de credenciais (NUNCA commitar!)
+include/credentials.h
+credentials.h
+secrets.h
+config_local.h
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.bak
+*.swp

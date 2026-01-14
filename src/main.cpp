@@ -41,23 +41,26 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 //------- Substitua o seguinte! ------
 
-char ssid[] = "MATHEUS ";         // SSID da sua rede (nome)
-char password[] = "12213490"; // senha da sua rede
+char ssid[] = "SEU_WIFI_SSID";         // SSID da sua rede (nome)
+char password[] = "SUA_SENHA_WIFI"; // senha da sua rede
 
-char clientId[] = "";     // Your client ID of your spotify APP
-char clientSecret[] = ""; // Your client Secret of your spotify APP (Do Not share this!)
+// IMPORTANTE: Preencha com suas credenciais do Spotify Developer Dashboard
+// https://developer.spotify.com/dashboard
+char clientId[] = "SEU_CLIENT_ID_AQUI";     // Your client ID of your spotify APP
+char clientSecret[] = "SEU_CLIENT_SECRET_AQUI"; // Your client Secret of your spotify APP (Do Not share this!)
 
 // Country code, including this is advisable
 #define SPOTIFY_MARKET "BR"
 
-#define SPOTIFY_REFRESH_TOKEN ""
+// Use o getRefreshToken.cpp para obter este token
+#define SPOTIFY_REFRESH_TOKEN "SEU_REFRESH_TOKEN_AQUI"
 
 //------- ---------------------- ------
 
 WiFiClientSecure client;
 SpotifyArduino spotify(client, clientId, clientSecret, SPOTIFY_REFRESH_TOKEN);
 
-unsigned long delayBetweenRequests = 100; // Tempo entre as solicitações (1 minuto)
+unsigned long delayBetweenRequests = 5000; // Tempo entre as solicitações (5 segundos - mínimo recomendado)
 unsigned long requestDueTime;               // hora em que a solicitação é devida
 
 void setup()
@@ -202,7 +205,11 @@ display.clearDisplay();
   // Exibe o nome do artista
   display.setTextSize(1);
   display.setCursor(0, 20);
-  display.println(currentlyPlaying.artists[0].artistName);
+  if (currentlyPlaying.numArtists > 0) {
+    display.println(currentlyPlaying.artists[0].artistName);
+  } else {
+    display.println("Artista desconhecido");
+  }
 
     //display.drawLine(0, 30, SCREEN_WIDTH, 30, SSD1306_WHITE);
     
